@@ -71,29 +71,31 @@ def morse_to_eng(text):
 
 #runs the rest of the code depending on the users decision of encrypting or decrytpting
 def run():
+        
+        while input !='e' or 'd':
         #stores whether the user wants to encrypt or decrypt
-        DEC=input("Choose encrypting or decyrpting: (e/d) ")
+            DEC=input("Choose encrypting or decyrpting: (e/d) ")
         #differentiates between user input
-        if DEC== 'e':
-            #saves the user input as a string
-            message = str((input("input message: ")))
-            #gets the translated text from the encrypting function in lower case
-            result = eng_to_morse(message.lower())
-            #prints result
-            print(result)
-
-        else:
-            
-            if DEC == 'd':
-                #saves the input in a string format
-                message = str((input("input cipher: ")))
-                #saves the result of the decrytping
-                result= morse_to_eng(message)
+            if DEC== 'e':
+                #saves the user input as a string
+                message = str((input("input message: ")))
+                #gets the translated text from the encrypting function in lower case
+                result = eng_to_morse(message.lower())
                 #prints result
                 print(result)
-            else: 
-                #if the input was neither 'e' or 'd' prints the following text
-                print("invalid input")
+
+            else:
+            
+                if DEC == 'd':
+                    #saves the input in a string format
+                    message = str((input("input cipher: ")))
+                    #saves the result of the decrytping
+                    result= morse_to_eng(message)
+                    #prints result
+                    print(result)
+                else: 
+                    #if the input was neither 'e' or 'd' prints the following text
+                    print("invalid input")
 
 
 
